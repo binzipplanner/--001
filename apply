@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빈집플래너 전문가 양성 과정 모집</title>
+    
+    <!-- Open Graph for SNS Sharing -->
+    <meta property="og:title" content="빈집플래너 전문가 양성 과정 모집">
+    <meta property="og:description" content="버려진 공간에 새로운 가치를! 2026년 1기 빈집플래너 전문가 과정을 모집합니다.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://binjib-planner.com">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        /* Modal Styles */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        body.modal-active {
+            overflow-x: hidden;
+            overflow-y: hidden !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 smooth-scroll">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <i class="fa-solid fa-house-chimney text-orange-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">빈집플래너 교육센터</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-orange-600 font-medium transition">과정소개</a>
+                <a href="#curriculum" class="text-gray-600 hover:text-orange-600 font-medium transition">커리큘럼</a>
+                <a href="#benefits" class="text-gray-600 hover:text-orange-600 font-medium transition">수강혜택</a>
+                <a href="#apply" class="bg-orange-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition font-bold shadow-md">수강신청</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600 text-2xl" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4">
+            <a href="#about" class="block py-2 text-gray-600">과정소개</a>
+            <a href="#curriculum" class="block py-2 text-gray-600">커리큘럼</a>
+            <a href="#benefits" class="block py-2 text-gray-600">수강혜택</a>
+            <a href="#apply" class="block py-2 text-orange-600 font-bold">수강신청</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-16">
+        <div class="text-white max-w-4xl">
+            <div class="animate-fade-in-up">
+                <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-bold mb-4 inline-block shadow-lg">2026년 1기 모집중</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
+                    버려진 공간에<br>새로운 가치를 불어넣다
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto drop-shadow-sm">
+                    대한민국 빈집 문제 해결의 주역, <strong>빈집플래너</strong>가 되어보세요.<br>
+                    부동산 분석부터 리모델링, 수익화 전략까지 한번에 마스터하는 실무 중심 과정입니다.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#apply" class="bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-orange-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        지금 바로 신청하기
+                    </a>
+                    <a href="#curriculum" class="bg-white text-gray-800 px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition shadow-lg">
+                        커리큘럼 확인하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-gray-800 mb-2">15만+</div>
+                    <div class="text-gray-500">전국 빈집 현황</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-orange-600 mb-2">High</div>
+                    <div class="text-gray-500">미래 유망 직종 선정</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-gray-800 mb-2">100%</div>
+                    <div class="text-gray-500">실무 중심 교육</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="빈집 리모델링 회의" class="rounded-2xl shadow-2xl w-full object-cover h-96 transform hover:scale-105 transition duration-500">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-orange-600 font-bold tracking-wide uppercase mb-2">Why Binjib Planner?</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">빈집, 이제는 기회입니다.</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        인구 감소와 도시 변화로 늘어가는 빈집은 사회적 문제이자 동시에 새로운 비즈니스의 기회입니다. 빈집플래너 과정은 방치된 빈집을 발굴하고, 리모델링하여 쉐어하우스, 스테이, 창업 공간 등으로 탈바꿈시키는 전문가를 양성합니다.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>부동산 권리 분석:</strong> 복잡한 빈집 소유권 및 법적 문제 해결 능력 배양</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>재생 건축 기획:</strong> 최소 비용으로 최대 효과를 내는 리모델링 기법</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>비즈니스 모델링:</strong> 에어비앤비, 공간대여 등 수익화 전략 수립</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">교육 커리큘럼</h2>
+                <p class="text-gray-600">이론부터 현장 실습까지, 8주 완성 로드맵</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl border hover:border-orange-500 hover:shadow-lg transition group cursor-default">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">1단계: 기초 이론</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>빈집의 정의 및 현황 파악</li>
+                        <li>빈집 특례법 및 관련 법규</li>
+                        <li>지역 상권 분석 방법론</li>
+                    </ul>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl border hover:border-orange-500 hover:shadow-lg transition group cursor-default">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-search-location"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">2단계: 현장 분석</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>우수/불량 빈집 선별 노하우</li>
+                        <li>실제 빈집 현장 답사</li>
+                        <li>건물 상태 진단 및 견적 산출</li>
+                    </ul>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl border hover:border-orange-500 hover:shadow-lg transition group cursor-default">
+                    <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-yellow-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">3단계: 리모델링</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>철거 및 폐기물 처리</li>
+                        <li>공간 디자인 및 인테리어</li>
+                        <li>시공 감리 및 원가 절감 팁</li>
+                    </ul>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl border hover:border-orange-500 hover:shadow-lg transition group cursor-default">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-won-sign"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">4단계: 수익화</h4>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>운영 관리 및 마케팅</li>
+                        <li>지자체 지원사업 활용</li>
+                        <li>최종 사업계획서 발표</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Info -->
+    <section id="benefits" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Info -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-8">모집 개요</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-32 font-bold text-gray-400">교육 기간</div>
+                            <div class="flex-1">2026년 3월 7일 ~ 3월 29일 (8주)</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-32 font-bold text-gray-400">교육 시간</div>
+                            <div class="flex-1">매주 토요일, 일요일 10:00 ~ 15:00 (총 24시간)</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-32 font-bold text-gray-400">교육 장소</div>
+                            <div class="flex-1">추후공지 (천안/광명 거점)</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-32 font-bold text-gray-400">모집 인원</div>
+                            <div class="flex-1">선착순 30명</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-32 font-bold text-gray-400">수강료</div>
+                            <div class="flex-1">500,000원 (교재비 포함)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Benefits -->
+                <div class="lg:w-1/2 bg-gray-800 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">수강생 특전</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                            <i class="fa-solid fa-certificate text-orange-400 mr-4 text-xl"></i>
+                            <span>빈집플래너 수료증 발급</span>
+                        </li>
+                        <li class="flex items-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                            <i class="fa-solid fa-file-contract text-orange-400 mr-4 text-xl"></i>
+                            <span>실전 빈집 계약서 및 견적서 양식 제공</span>
+                        </li>
+                        <li class="flex items-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                            <i class="fa-solid fa-users text-orange-400 mr-4 text-xl"></i>
+                            <span>수료 후 커뮤니티 초대 및 프로젝트 매칭</span>
+                        </li>
+                        <li class="flex items-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+                            <i class="fa-solid fa-chalkboard-user text-orange-400 mr-4 text-xl"></i>
+                            <span>전문가 1:1 창업 멘토링 1회권</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="bg-orange-600 p-8 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-2">수강 신청하기</h2>
+                    <p class="text-orange-100">조기에 마감될 수 있으니 서둘러 신청해주세요.</p>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <form id="applicationForm" class="space-y-6">
+                        <!-- Name & Phone -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">이름</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none" placeholder="홍길동">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">연락처</label>
+                                <input type="tel" id="phone" name="phone" required maxlength="13" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none" placeholder="010-0000-0000">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">이메일</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none" placeholder="example@email.com">
+                        </div>
+
+                        <!-- Gender & Age -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-1">성별</label>
+                                <select id="gender" name="gender" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none">
+                                    <option value="">성별 선택</option>
+                                    <option value="남성">남성</option>
+                                    <option value="여성">여성</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700 mb-1">연령대</label>
+                                <select id="age" name="age" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none">
+                                    <option value="">연령대 선택</option>
+                                    <option value="20대">20대</option>
+                                    <option value="30대">30대</option>
+                                    <option value="40대">40대</option>
+                                    <option value="50대">50대</option>
+                                    <option value="60대 이상">60대 이상</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Residence Area -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">거주지역</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <select id="sido" name="sido" onchange="updateSigungu()" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none">
+                                    <option value="">시/도 선택</option>
+                                </select>
+                                <select id="sigungu" name="sigungu" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none">
+                                    <option value="">시/군/구 선택</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Option -->
+                        <div>
+                            <label for="type" class="block text-sm font-medium text-gray-700 mb-1">참여 지역 및 일정</label>
+                            <select id="type" name="type" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none">
+                                <option value="충남 천안 (주말반)">충남 천안 (주말반) - 3월 7일 개강</option>
+                                <option value="경기도 광명 (주중반)">경기도 광명 (주중반) - 2월 26일 개강</option>
+                            </select>
+                        </div>
+
+                        <!-- Motivation -->
+                        <div>
+                            <label for="motivation" class="block text-sm font-medium text-gray-700 mb-1">지원 동기</label>
+                            <textarea id="motivation" name="motivation" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition outline-none" placeholder="이 과정을 통해 이루고 싶은 목표나 현재 상황을 간단히 적어주세요."></textarea>
+                        </div>
+
+                        <!-- Agreement -->
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="privacy" type="checkbox" required class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-orange-300 cursor-pointer">
+                            </div>
+                            <label for="privacy" class="ml-2 text-sm text-gray-600">
+                                <button type="button" onclick="toggleModal('privacyModal')" class="text-orange-600 hover:underline font-medium">개인정보 수집 및 이용</button>에 동의합니다.
+                            </label>
+                        </div>
+                        
+                        <!-- FormSubmit Configuration (Hidden) -->
+                        <input type="hidden" name="_subject" value="빈집플래너 교육과정 신청서가 접수되었습니다.">
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Redirect allows you to control where they go, but ajax fetch is smoother. We keep ajax. -->
+
+                        <button type="submit" class="w-full bg-gray-900 text-white font-bold py-4 rounded-lg hover:bg-gray-800 transition transform hover:-translate-y-1 shadow-md">
+                            신청서 제출하기
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="hidden mt-6 text-center p-6 bg-green-50 rounded-lg border border-green-200 animate-fade-in-up">
+                        <i class="fa-solid fa-circle-check text-green-500 text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">신청이 완료되었습니다!</h3>
+                        <p class="text-gray-600 mb-6">입력하신 <strong><span id="displayPhone" class="text-gray-800"></span></strong> 번호로<br>담당자가 24시간 내 인터뷰 전화를 드릴 예정입니다.</p>
+                        
+                        <div class="flex flex-col md:flex-row justify-center gap-3">
+                            <button onclick="window.location.href = window.location.pathname" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition font-bold shadow-md">
+                                <i class="fa-solid fa-house mr-2"></i>홈으로 가기
+                            </button>
+                            <button onclick="location.reload()" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition font-bold shadow-md">
+                                <i class="fa-solid fa-user-plus mr-2"></i>추가 신청하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
+        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" onclick="toggleModal('privacyModal')"></div>
+        
+        <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto max-h-[90vh]">
+            <div class="modal-content py-4 text-left px-6">
+                <!-- Title -->
+                <div class="flex justify-between items-center pb-3 border-b">
+                    <p class="text-xl font-bold">개인정보 수집 및 이용 동의</p>
+                    <div class="modal-close cursor-pointer z-50" onclick="toggleModal('privacyModal')">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="my-5 text-sm text-gray-600 space-y-2 h-48 overflow-y-auto bg-gray-50 p-3 rounded">
+                    <p class="font-bold">1. 개인정보 수집 목적</p>
+                    <p>교육 과정 상담, 신청자 확인, 공지사항 전달</p>
+                    
+                    <p class="font-bold mt-2">2. 수집하는 개인정보 항목</p>
+                    <p>이름, 연락처, 이메일, 성별, 연령대, 거주지역, 지원동기</p>
+                    
+                    <p class="font-bold mt-2">3. 개인정보 보유 및 이용 기간</p>
+                    <p>수집일로부터 교육 종료 후 1년까지 보유하며, 이후 지체 없이 파기합니다.</p>
+                    
+                    <p class="font-bold mt-2">4. 동의 거부 권리</p>
+                    <p>귀하는 개인정보 수집에 거부할 권리가 있으나, 동의 거부 시 교육 신청이 제한될 수 있습니다.</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="flex justify-end pt-2">
+                    <button class="px-4 py-2 bg-orange-600 p-3 rounded-lg text-white hover:bg-orange-700 font-bold text-sm" onclick="confirmPrivacy()">확인 및 동의</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start">
+                <div class="mb-8 md:mb-0 text-center md:text-left w-full md:w-2/3">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <i class="fa-solid fa-house-chimney text-gray-500 text-xl"></i>
+                        <span class="text-xl font-bold text-white">빈집플래너 교육센터</span>
+                    </div>
+                    <div class="text-sm leading-6 space-y-1">
+                        <p>
+                            <span class="font-bold text-gray-300">대표:</span> 최광운 | 
+                            <span class="font-bold text-gray-300">사업자등록번호:</span> 316-03-54299
+                        </p>
+                        <p class="mb-4">
+                            <span class="font-bold text-gray-300">문의:</span> basement01@naver.com | 0507-1311-5072
+                        </p>
+                        <div class="pt-4 border-t border-gray-800 mt-4">
+                            <p class="font-bold text-gray-300 mb-2">[권역별 교육장 및 협력센터]</p>
+                            <p>충남 천안시 동남구 옛시청길 2-1 (도시문화아카데미)</p>
+                            <p>경남 사천시 노산공원길 16, 3층 (삼천포레스트)</p>
+                            <p>경남 사천시 해태거리길42 (오늘의빈집연구소)</p>
+                            <p>경남 함양군 함양읍 운림1길 22 (빈집온)</p>
+                            <p>강원 춘천시 순환대로 758-1 (어반블랭크스)</p>
+                            <p>전북 남원시 주천면 장안용궁길 169-51 (공간&터)</p>
+                            <p>전북 임실군 성수면 월평동길9 (헤븐엔터&기획)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex space-x-6 text-2xl w-full md:w-1/3 justify-center md:justify-end mt-6 md:mt-0">
+                    <a href="https://www.facebook.com/oppazip" target="_blank" class="hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/binziplab?igsh=MXQwdHVwNHduaGh4Ng==" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@localcurator" target="_blank" class="hover:text-red-600 transition"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://m.blog.naver.com/basement01" target="_blank" class="hover:text-green-500 transition"><i class="fa-solid fa-blog"></i></a>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-xs text-gray-600">
+                &copy; 2026 Binjib Planner Education Center. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Area Data (Condensed for performance, but full list is recommended in production) ---
+        // (Previously provided list is good. Re-including minimal set for brevity if needed, but keeping full is better)
+        const areaData = {
+            "서울특별시": ["강남구", "강동구", "강북구", "강서구", "관악구", "광진구", "구로구", "금천구", "노원구", "도봉구", "동대문구", "동작구", "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구"],
+            "경기도": ["수원시", "성남시", "의정부시", "안양시", "부천시", "광명시", "평택시", "동두천시", "안산시", "고양시", "과천시", "구리시", "남양주시", "오산시", "시흥시", "군포시", "의왕시", "하남시", "용인시", "파주시", "이천시", "안성시", "김포시", "화성시", "광주시", "양주시", "포천시", "여주시", "연천군", "가평군", "양평군"],
+            "인천광역시": ["계양구", "미추홀구", "남동구", "동구", "부평구", "서구", "연수구", "중구", "강화군", "옹진군"],
+            "강원도": ["춘천시", "원주시", "강릉시", "동해시", "태백시", "속초시", "삼척시", "홍천군", "횡성군", "영월군", "평창군", "정선군", "철원군", "화천군", "양구군", "인제군", "고성군", "양양군"],
+            "충청북도": ["청주시", "충주시", "제천시", "보은군", "옥천군", "영동군", "증평군", "진천군", "괴산군", "음성군", "단양군"],
+            "충청남도": ["천안시", "공주시", "보령시", "아산시", "서산시", "논산시", "계룡시", "당진시", "금산군", "부여군", "서천군", "청양군", "홍성군", "예산군", "태안군"],
+            "대전광역시": ["대덕구", "동구", "서구", "유성구", "중구"],
+            "세종특별자치시": ["세종특별자치시"],
+            "경상북도": ["포항시", "경주시", "김천시", "안동시", "구미시", "영주시", "영천시", "상주시", "문경시", "경산시", "군위군", "의성군", "청송군", "영양군", "영덕군", "청도군", "고령군", "성주군", "칠곡군", "예천군", "봉화군", "울진군", "울릉군"],
+            "경상남도": ["창원시", "진주시", "통영시", "사천시", "김해시", "밀양시", "거제시", "양산시", "의령군", "함안군", "창녕군", "고성군", "남해군", "하동군", "산청군", "함양군", "거창군", "합천군"],
+            "대구광역시": ["남구", "달서구", "동구", "북구", "서구", "수성구", "중구", "달성군"],
+            "부산광역시": ["강서구", "금정구", "남구", "동구", "동래구", "부산진구", "북구", "사상구", "사하구", "서구", "수영구", "연제구", "영도구", "중구", "해운대구", "기장군"],
+            "울산광역시": ["남구", "동구", "북구", "중구", "울주군"],
+            "전라북도": ["전주시", "군산시", "익산시", "정읍시", "남원시", "김제시", "완주군", "진안군", "무주군", "장수군", "임실군", "순창군", "고창군", "부안군"],
+            "전라남도": ["목포시", "여수시", "순천시", "나주시", "광양시", "담양군", "곡성군", "구례군", "고흥군", "보성군", "화순군", "장흥군", "강진군", "해남군", "영암군", "무안군", "함평군", "영광군", "장성군", "완도군", "진도군", "신안군"],
+            "광주광역시": ["광산구", "남구", "동구", "북구", "서구"],
+            "제주특별자치도": ["제주시", "서귀포시"]
+        };
+
+        // Initialize Sido Dropdown
+        const sidoSelect = document.getElementById('sido');
+        const sigunguSelect = document.getElementById('sigungu');
+
+        Object.keys(areaData).forEach(function(sido) {
+            const option = document.createElement('option');
+            option.value = sido;
+            option.text = sido;
+            sidoSelect.appendChild(option);
+        });
+
+        // Update Sigungu Dropdown
+        function updateSigungu() {
+            const selectedSido = sidoSelect.value;
+            sigunguSelect.innerHTML = '<option value="">시/군/구 선택</option>';
+
+            if (selectedSido && areaData[selectedSido]) {
+                areaData[selectedSido].forEach(function(sigungu) {
+                    const option = document.createElement('option');
+                    option.value = sigungu;
+                    option.text = sigungu;
+                    sigunguSelect.appendChild(option);
+                });
+            }
+        }
+
+        // --- Phone Number Auto-Formatter ---
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let number = e.target.value.replace(/[^0-9]/g, '');
+            let tel = '';
+
+            if (number.length < 4) {
+                return number;
+            } else if (number.length < 7) {
+                tel += number.substr(0, 3);
+                tel += '-';
+                tel += number.substr(3);
+            } else if (number.length < 11) {
+                tel += number.substr(0, 3);
+                tel += '-';
+                tel += number.substr(3, 3);
+                tel += '-';
+                tel += number.substr(6);
+            } else {
+                tel += number.substr(0, 3);
+                tel += '-';
+                tel += number.substr(3, 4);
+                tel += '-';
+                tel += number.substr(7);
+            }
+            e.target.value = tel;
+        });
+
+        // --- Modal Logic ---
+        function toggleModal(modalID) {
+            const modal = document.getElementById(modalID);
+            modal.classList.toggle('opacity-0');
+            modal.classList.toggle('pointer-events-none');
+            document.body.classList.toggle('modal-active');
+        }
+
+        function confirmPrivacy() {
+            document.getElementById('privacy').checked = true;
+            toggleModal('privacyModal');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- Form Submission Logic ---
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const btn = this.querySelector('button[type="submit"]');
+            const form = this;
+            const formData = new FormData(form);
+            
+            // Check Address Selection
+            if(!formData.get('sido') || !formData.get('sigungu')) {
+                alert('거주지역(시/도 및 시/군/구)을 모두 선택해주세요.');
+                return;
+            }
+            
+            // UI Loading state
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> 전송중...';
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            // Send to FormSubmit.co
+            // NOTE: Replace 'basement01@naver.com' with your actual email if different.
+            fetch("https://formsubmit.co/ajax/basement01@naver.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
+            })
+            .then(response => response.json())
+            .then(data => {
+                const phone = formData.get('phone');
+                
+                // Hide form, Show success message
+                form.style.display = 'none';
+                
+                const successDiv = document.getElementById('successMessage');
+                document.getElementById('displayPhone').innerText = phone;
+                successDiv.classList.remove('hidden');
+                
+                document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.\n(메일 서버 문제일 수 있습니다)');
+                
+                btn.disabled = false;
+                btn.innerText = '신청서 제출하기';
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
+            });
+        });
+    </script>
+</body>
+</html>
